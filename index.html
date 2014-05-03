@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Энди Уорхолл</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+<link rel="stylesheet" href="jquery.mobile-1.4.2.css" />
+ 
+<link rel="stylesheet" href="nonono.css" />
+<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+
+<script src="jqm.js"></script>
+<script src="jquery.mobile-1.4.2.js"></script>
+        
+</head>
+<body>
+<!-- page1==================================================================================================================== -->
+<div data-role="page" data-theme="b" id="p1" >
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Вектор</a></li>
+			<li><a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Растр</a></li>
+			<li><a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Мерилин</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+		<p style="text-align: center"><img src="images/11.png"></p>
+				
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Фильмы </a>
+	</div><!-- /content -->
+
+	<div role="main" class="ui-content">
+        <a href="#name"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя </a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">Растр</a>
+		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">Мерилин</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- dialog==================================================================================================================== -->
+<div data-role="page" data-dialog="true" id="dialog" data-close-btn="right">
+
+	<div data-role="header">
+
+		<h1>Дискография</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+       <table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+     <thead>
+       <tr>
+         <th>Фильмы</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>«Дорз» (1991) — Криспин Гловер</td>
+       </tr>
+       <tr>
+         <td>«Баския» (1996) — Дэвид Боуи</td>
+       </tr>
+       <tr>
+         <td>«Я стреляла в Энди Уорхола» (1996) — Джаред Харрис</td>
+       </tr>
+       <tr>
+         <td>«Я соблазнила Энди Уорхола» («Фабричная девушка») (2006) — Гай Пирс</td>
+       </tr>
+       <tr>
+         <td>B«Хранители» (2009)</td>
+       </tr>
+       <tr>
+         <td>«Люди в чёрном 3» (2012) — Билл Хэйдер</td>
+       </tr>
+       <tr>
+         <td>«Noel Fielding's Luxury Comedy» (2012) — Том Митен</td>
+       </tr>
+     </tbody>
+   </table>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- name==================================================================================================================== -->
+<div data-role="page" data-dialog="true" id="name" data-close-btn="right">
+
+	<div data-role="header">
+
+		<h1>Имя</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	<canvas id="myName" width="600" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myName');
+      var context = canvas.getContext('2d');
+
+      context.strokeStyle = "d11ec7";
+      context.lineWidth = 1;
+      context.beginPath();
+
+     
+//Г
+      context.moveTo(15, 30);
+      context.lineTo(15, 180);
+
+      context.moveTo(15, 30);
+      context.lineTo(65, 30);
+
+      //context.bezierCurveTo(20, 40, -20, 220, 110, 175);
+
+
+//У
+      context.moveTo(85, 30);
+      context.lineTo(115, 105);
+
+      context.moveTo(145, 30); 
+      context.lineTo(85, 180); 
+
+
+//З
+      context.moveTo(165, 30);
+      context.lineTo(220, 30);
+
+      context.moveTo(220, 30); 
+      context.lineTo(220, 90); 
+
+      context.moveTo(220, 90);
+      context.lineTo(205, 105); 
+
+      context.moveTo(205, 105);
+      context.lineTo(220, 120);
+
+      context.moveTo(220, 120);
+      context.lineTo(220, 180); 
+
+      context.moveTo(220, 180);
+      context.lineTo(165, 180); 
+
+//А
+      context.moveTo(235, 180);
+      context.lineTo(265, 30);
+
+      context.moveTo(265, 30); 
+      context.lineTo(295, 180); 
+
+      context.moveTo(249, 105); 
+      context.lineTo(281, 105); 
+
+//Л
+      context.moveTo(345, 30); 
+      context.lineTo(315, 180); 
+
+      context.moveTo(345, 30);
+      context.lineTo(375, 180);
+
+
+//Ь
+      context.moveTo(390, 30); 
+      context.lineTo(390, 180); 
+
+      context.moveTo(390, 180);
+      context.lineTo(450, 180); 
+
+      context.moveTo(450, 180);
+      context.lineTo(450, 100);
+
+      context.moveTo(450, 100);
+      context.lineTo(390, 100);
+      
+      context.stroke();
+    </script>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<!-- page2==================================================================================================================== -->
+<div data-role="page" data-theme="b" id="p2">
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Вектор</a></li>
+			<li><a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Растр</a></li>
+			<li><a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Мерилин</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+		<p style="text-align: center"><img src="images/22.png"></p>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Фильмы </a>
+	</div><!-- /content -->
+
+<div role="main" class="ui-content">
+        <a href="#name"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя </a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">Вектор</a>
+		<a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini">Мерилин</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- page3==================================================================================================================== -->
+<div data-role="page" data-theme="b" id="p3">
+
+	<div data-role="header">
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Вектор </a></li>
+			<li><a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Растр</a></li>
+			<li><a href="#p3" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline">Мерилин</a></li>
+		</ul>
+	</div><!-- /navbar -->
+
+		<p style="text-align: center"><img src="images/33.png"></p>
+	</div><!-- /header -->
+
+<div role="main" class="ui-content">
+        <a href="#dialog"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Фильмы </a>
+	</div><!-- /content -->
+
+<div role="main" class="ui-content" >
+        <a href="#name"  class="ui-btn ui-corner-all ui-shadow ui-mini "> Имя </a>
+	</div><!-- /content -->
+
+	<div data-role="footer" >
+		<a href="#p1" class="ui-btn ui-corner-all ui-shadow ui-mini">Вектор</a>
+		<a href="#p2" class="ui-btn ui-corner-all ui-shadow ui-mini">Растр</a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
